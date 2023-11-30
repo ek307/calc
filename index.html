@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-calc">
+        <div class="inp input" id="input"><form name="form"><input type="text" name="textview" placeholder="0" readonly></form></div>
+        <div class="btn_3" id="btn" onclick="clean()">C</div>
+        <div class="btn_3" id="btn_save" onclick="save()">MR</div>
+        <div class="btn_3" onclick="back()">&larr;</div>
+        <div class="btn_2" onclick="insert('/')">/</div>
+        <div class="btn" onclick="insert('7')">7</div>
+        <div class="btn" onclick="insert('8')">8</div>
+        <div class="btn" onclick="insert('9')">9</div>
+        <div class="btn_2" onclick="insert('*')">*</div>
+        <div class="btn" onclick="insert('4')">4</div>
+        <div class="btn" onclick="insert('5')">5</div>
+        <div class="btn" onclick="insert('6')">6</div>
+        <div class="btn_2" onclick="insert('-')">-</div>
+        <div class="btn" onclick="insert('1')">1</div>
+        <div class="btn" onclick="insert('2')">2</div>
+        <div class="btn" onclick="insert('3')">3</div>
+        <div class="btn_2" onclick="insert('+')">+</div>
+        <div class="btn" onclick="insert('-')">+/-</div>
+        <div class="btn" onclick="insert('0')">0</div>
+        <div class="btn" onclick="insert('.')">.</div>
+        <div class="btn_2" onclick="equal()">=</div>
+    </div>
+    <ul id="rez"></ul>
+    <script>
+        function insert(num){
+            document.form.textview.value =
+            document.form.textview.value + num;
+        }
+        function clean(){
+            document.form.textview.value = "";
+        }
+        function back(){
+            var exp = document.form.textview.value;
+            document.form.textview.value = exp.substring(0,exp.length-1);
+        }
+        function equal(){
+            var exp = document.form.textview.value;
+            if(exp){
+                document.form.textview.value = eval(exp);
+            }
+        }
+        let buff=[];
+        btn_save.onclick = function(){
+            buff.push(document.getElementById('input').value);
+            let li = document.createElement('li');
+            li.textContent = buff[buff.length-1];
+            document.getElementById('rez').appendChild(li);
+        }
+    </script>
+</body>
+</html>

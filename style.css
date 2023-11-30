@@ -1,0 +1,60 @@
+.container-calc{
+    width: 558px;
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/fone.jpeg);
+    background-size: cover;
+    border-radius: 10px;
+}
+#rez{
+    color: blue;
+}
+form{
+    max-width: 100%;
+    text-align: right;
+}
+.inp input{
+    width: 545px;
+    height: 60px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: right;
+    background: transparent;
+}
+.btn{
+    text-align: center;
+    width: 143px;
+    border-radius: 100px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 900;
+    border: 4px solid rgba(34, 68, 178, 0.404);
+    cursor: pointer;
+}
+.btn_2{
+    text-align: center;
+    width: 95px;
+    border-radius: 100px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 900;
+    border: 4px solid rgba(34, 68, 178, 0.404);
+    color: rgb(130, 24, 179);
+    cursor: pointer;
+}
+.btn_3{
+    text-align: center;
+    width: 143px;
+    border-radius: 100px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 900;
+    border: 4px solid rgba(34, 68, 178, 0.404);
+    color: rgb(130, 24, 179);
+    cursor: pointer;
+}
